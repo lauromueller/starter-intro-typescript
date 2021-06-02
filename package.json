@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
+    "ts:check": "tsc --noEmit",
     "ts:exec": "ts-node"
   },
   "keywords": [],
