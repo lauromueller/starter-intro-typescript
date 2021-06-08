@@ -1,3 +1,15 @@
-const greeting: string = "Hello";
+interface Person {
+  firstName: string;
+  lastName: string;
+  getFullName(): string;
+}
 
-console.log(greeting);
+const person1: Person = {
+  firstName: 'John',
+  lastName: 'Doe',
+  getFullName() {
+    return `${this.firstName} ${this.lastName}`
+  }
+}
+
+console.log(person1.getFullName());
