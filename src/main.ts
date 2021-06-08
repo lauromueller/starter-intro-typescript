@@ -1,15 +1,12 @@
 interface Person {
-  firstName: string;
-  lastName: string;
-  getFullName(): string;
+  fName: string;
+  lName: string;
 }
 
-const person1: Person = {
-  firstName: 'John',
-  lastName: 'Doe',
-  getFullName() {
-    return `${this.firstName} ${this.lastName}`
-  }
+interface Printable {
+  printFullName: () => void;
 }
 
-console.log(person1.getFullName());
+const doSomething = (myPerson: Person & Printable) => {
+  myPerson.printFullName();
+};
